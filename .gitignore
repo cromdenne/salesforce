@@ -4,3 +4,5 @@ _site/
 # ignore test files used for posts
 _test/
 _layouts/test.html
+
+.jekyll-cache/
