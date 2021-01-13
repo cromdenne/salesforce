@@ -9,6 +9,7 @@ $black: #3a3a3a;
 $white: #ffffff;
 $gold: #ffbd41;
 $blue: #007ef6;
+$deep-blue: #4183D7;
 
 /*===========================================================================*/
 /* global styles                                                             */
@@ -23,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: $gold;
+  color: $blue;
 }
 
 p {
@@ -40,7 +41,7 @@ p {
 }
 
 .nav-item.active .nav-link {
-  color: $gold !important;
+  color: $blue !important;
 }
 
 .link-unstyled:active,
@@ -51,7 +52,7 @@ p {
 .btn-unstyled {
   background-color: none;
   border: none;
-  color: $gold;
+  color: $blue;
 }
 
 .badge-gold {
@@ -67,7 +68,7 @@ a, a:hover {
 }
 
 a:hover {
-  color: $blue;
+  color: $gold;
   text-decoration: none;
 }
 
@@ -87,7 +88,7 @@ a:hover {
 }
 
 .slide-effect a span::before {
-  color: $gold;
+  color: $blue;
   content: attr(data-hover);
   position: absolute;
   -webkit-transform: translate3d(0,0,0);
@@ -186,7 +187,7 @@ a:hover {
 .underline-effect {
   position: relative;
   &:hover {
-    color: $gold;
+    color: $blue;
   }
 }
 
@@ -196,7 +197,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 1px;
-  background: $gold;
+  background: $blue;
   content: '';
   opacity: 0;
   -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
@@ -233,7 +234,7 @@ a:hover {
 
 .backward-effect:hover,
 .forward-effect:hover {
-  color: $gold;
+  color: $blue;
 }
 
 .backward-effect:hover i,
@@ -251,12 +252,29 @@ a:hover {
 }
 
 /*===========================================================================*/
+/* nav                                                                       */
+/*===========================================================================*/
+.navbar {
+  img {
+    border-radius: 100%;
+    width: 80px;
+  }
+  .navbar-brand {
+    font-family: 'Gilda Display', serif;
+    color: $black;
+    &:hover, &:active {
+      color: $gold;
+    }
+  }
+}
+
+/*===========================================================================*/
 /* about                                                                     */
 /*===========================================================================*/
 #about {
   padding: 3em 1em;
   h1 {
-    color: $gold;
+    color: $blue;
   }
 }
 
@@ -265,7 +283,7 @@ a:hover {
 /*===========================================================================*/
 #search {
   .close {
-    color: $gold;
+    color: $blue;
     font-size: 3em;
   }
   .modal-fullscreen {
@@ -303,7 +321,7 @@ a:hover {
       font-size: 2em;
       transition: all 0.3s;
       &:hover {
-        color: darken($gold, 15%);
+        color: darken($blue, 15%);
         cursor: pointer;
         transition: all 0.3s;
       }
@@ -367,12 +385,14 @@ a:hover {
     top: 0;
   }
   div[class*='bottom'] {
-    background-color: $black;
+    background-color: $deep-blue;
     bottom: 0;
     top: 50%;
   }
   img.splash {
     width: 100%;
+    max-height: 300px;
+    object-fit: cover;
   }
   .splash-text {
     left: 35px;
@@ -403,7 +423,7 @@ a:hover {
 /* blog feed                                                                 */
 /*===========================================================================*/
 .content {
-  background-color: $black;
+  background-color: $deep-blue;
   color: $white;
 }
 
@@ -481,7 +501,7 @@ a:hover {
 }
 
 .post-container {
-  background-color: $black;
+  background-color: $deep-blue;
   padding-left: 35px;
   padding-right: 35px;
   width: 100%;
@@ -507,7 +527,7 @@ a:hover {
   margin-top: 3em;
   margin-bottom: 3em;
   .caption {
-    border-left: 10px solid $black;
+    border-left: 10px solid $deep-blue;
     font-size: 0.85em;
     opacity: 0.6;
     padding: 1em 1em 0 1em;
@@ -543,12 +563,12 @@ a:hover {
   margin-bottom: 1em;
   padding: 1em;
   .label {
-    background-color: $gold;
+    background-color: $blue;
     color: $white;
     padding-left: 1em;
   }
   .vertical-rule {
-    border-right: 1px solid darken($gold, 15%);
+    border-right: 1px solid darken($blue, 15%);
     padding-left: 1em;
   }
   .text {
@@ -621,90 +641,10 @@ a:hover {
 }
 
 /*===========================================================================*/
-/* gallery                                                                   */
-/*===========================================================================*/
-.gallery {
-  padding: 5em 0;
-  .card {
-    border: none;
-    margin-bottom: 20px;
-    .card-img {
-      border-radius: 0px;
-    }
-  }
-  .card-img-overlay {
-    background-color: rgba($black, 0.75);
-    color: $white;
-    opacity: 0;
-    transition: 0.4s ease;
-    p {
-      font-size: 0.75em;
-    }
-    .magnifier {
-      bottom: 10px;
-      font-size: 2em;
-      position: absolute;
-      opacity: 0.25;
-      right: 15px;
-    }
-  }
-  .modal {
-    color: $black;
-    .modal-content {
-      border-radius: 0;
-    }
-    .modal-title {
-      small {
-        font-size: 0.75em;
-        opacity: 0.5;
-      }
-    }
-    .photo-story {
-      font-size: 0.85em;
-      margin-bottom: 0;
-      padding-top: 1em;
-      padding-bottom: 0;
-      p {
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-    }
-    .exif {
-      small {
-        opacity: 0.5;
-      }
-      p {
-        font-size: 0.85em;
-      }
-    }
-  }
-}
-
-.card:hover .card-img-overlay {
-  cursor: pointer;
-  opacity: 0.75;
-  transition: 0.4s ease;
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    .card-img-overlay {
-      p {
-        display: none;
-      }
-      .magnifier {
-        display: none;
-      }
-    }
-  }
-}
- 
-
-/*===========================================================================*/
 /* footer                                                                    */
 /*===========================================================================*/
 .footer {
-  background-color: darken($black, 5%);
+  background-color: darken($deep-blue, 40%);
   color: $white;
   padding-top: 1.5em;
   padding-bottom: 1em;
