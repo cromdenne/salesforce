@@ -1,0 +1,14 @@
+collections:
+    
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: posts
+      excerpt_separator: <!-- end_excerpt -->
+
+permalink: pretty
+future: false

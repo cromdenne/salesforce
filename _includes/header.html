@@ -1,0 +1,119 @@
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo.png" width="50" height="50" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#topnav" aria-controls="topnav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="topnav">
+          <ul class="navbar-nav">
+            <li class="nav-item
+              {% if page.nav == "home" %} active
+              {% else %} slide-effect{% endif %}">
+              <a class="nav-link" href="/"> 
+                <span data-hover="Home">Home</span>
+                {% if page.nav == "home" %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+            <li class="nav-item
+              {% if page.nav == "posts" %} active
+              {% else %} slide-effect{% endif %}">
+              <a class="nav-link" href="/archive/">
+                <span data-hover="Posts">Posts</span>
+                {% if page.nav == "posts" %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+            <li class="nav-item
+              {% if page.nav == "gallery" %} active
+              {% else %} slide-effect{% endif %}">
+              <a class="nav-link" href="/gallery/">
+                <span data-hover="Gallery">Gallery</span>
+                {% if page.nav == "gallery" %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+            </li>
+            <li class="nav-item wobble-effect">
+              <a class="nav-link" data-toggle="collapse" href="#about"
+                 role="button" aria-expanded="false" aria-controls="#about">
+                About
+              </a>
+            </li>
+            <li class="nav-item wobble-effect">
+              <a class="nav-link" data-toggle="modal" data-target="#search">
+                <span class="d-inline d-lg-none">Search</span> 
+                <i class="fas fa-search"></i>
+              </a>
+            </li>
+          </ul>
+        </div><!-- /.collapse -->
+      </nav>
+    </div><!-- /.container -->
+
+    <div class="collapse" id="about">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-7">
+            <h1>Hi there, I'm Cory!</h1>
+            <p>
+              And this is my eclectic blog. I write about travel, development,
+              soccer and other random stuff. I also share photos. I like to
+              visit interesting historical places, natural wonders, and sunny
+              beaches. I spend my free time learning about web development
+              and building neat things. I care quite a bit about a red club
+              from Liverpool, over 3,500 miles from my home. I’m passionate
+              about sharing the beautiful game with young people in my
+              community.
+            </p>
+          </div><!-- /.col-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.collapse -->
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" id="search" tabindex="-1" 
+         role="dialog" aria-labelledby="search" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close"
+                    data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                  <form action="get" id="site_search">
+                    <div class="input-group input-group-lg">
+                      <input type="text" class="form-control" id="search_box"
+                             placeholder="search..."
+                             aria-label="search..."
+                             aria-describedby="search_icon">
+                      <div class="input-group-append">
+                        <button class="btn-unstyled" type="submit">
+                          <i class="fas fa-search"></i>
+                        </button>
+                      </div><!-- /.input-group-append -->
+                    </div><!-- /.input-group -->
+                  </form>
+                </div><!-- /.col-10 -->
+              </div><!-- /.row -->
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
+                  <ul class="list-unstyled" id="search_results"></ul>
+                </div><!-- /.col-10 -->
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->

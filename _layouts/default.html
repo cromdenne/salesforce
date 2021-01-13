@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+    
+    {% include header.html %}
+
+    <div class="splashspace">
+      <div class="border-left-top"></div>
+      <div class="border-left-bottom"></div>
+      <img class="img-fluid splash"
+           src="{{ page.splash }}"
+           alt="{{ page.splashAlt }}">
+      <div class="splash-text">
+        <h3>{{ page.splashTitleSmall }}</h3>
+        <h1>{{ page.splashTitleLarge }}</h1>
+      </div><!-- /.splash-text -->
+      <div class="border-right-top"></div>
+      <div class="border-right-bottom"></div>
+    </div><!-- /.splashspace -->
+    
+    {{ content }}
+
+    {% include footer.html %}
+
+  </body>
+</html>

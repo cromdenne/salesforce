@@ -1,0 +1,70 @@
+---
+# Frontmatter comment
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+
+    {% include header.html %}
+
+    <div class="splashspace">
+      <div class="border-left-top"></div>
+      <div class="border-left-bottom"></div>
+      <img class="img-fluid splash" src="{{ page.hero }}"
+           alt="{{ page.heroAlt }}">
+      <div class="postsplash text-center">
+        <h1 class="title">{{ page.title }}</h1>
+        <p class="date">{{ page.date | date: '%^b %d, %Y' }}</p>
+      </div><!-- /.post-title -->
+      <div class="border-right-top"></div>
+      <div class="border-right-bottom"></div>
+    </div><!-- /.splashspace -->
+
+    <div class="post-container">
+      <div class="post">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-xs-10">
+              {{ content }}
+              <div class="row pagination">
+                <div class="col-6">
+                  {% if page.previous.url %}
+                    <a class="backward-effect" href="{{page.previous.url}}">
+                      <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;
+                      {{ page.previous.title }}
+                    </a>
+                  {% endif %}
+                </div><!-- /.col-6 -->
+                <div class="col-6 text-right">
+                  {% if page.next.url %}
+                  <a class="forward-effect" href="{{page.next.url}}">
+                    {{ page.next.title }}&nbsp;&nbsp;
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  {% endif %}
+                </div><!-- /.col-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.col-md-8 -->
+          </div><!-- /.row -->
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-xs-10">
+              <hr class="divider">
+            </div><!-- /.col-md-8 -->
+          </div><!-- /.row -->
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-xs-10">
+              {% include comments.html %}
+            </div><!-- /.col-md-8 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.post -->
+    </div><!-- /.post-container -->
+
+    {% include footer.html %}
+
+  </body>
+</html>
