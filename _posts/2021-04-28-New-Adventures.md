@@ -129,7 +129,7 @@ the paid stuff is the real deal too, espcially if you want to land a job in
 the Salesforce space quicker and more efficiently than I did.
 
 I also want to mention [Jordan Nelson](https://www.linkedin.com/in/jordan-nelson-salesforce){:.underline-effect}{:target="blank"}.
-Jordan is a Salesforce professional, but he's also an expert at LinkeIn and 
+Jordan is a Salesforce professional, but he's also an expert at LinkedIn and 
 creating a personal brand. He posts frequently and shares great advice about 
 building an online presence to help you stand out in your job search.
 
