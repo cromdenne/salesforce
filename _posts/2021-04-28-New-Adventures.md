@@ -142,7 +142,8 @@ where this Salesforce journey will take me!
 ---
 
 <br>
-Some references and additional resources those thinking about a Salesforce career:
+Some references and additional resources for those thinking about a Salesforce 
+career:
 - [Salesforce for Everyone (YouTube)](https://www.youtube.com/channel/UCfemF3S07kITbbtbtdGIYJQ){:.underline-effect}{:target="blank"}
 - [Salesforce for Everyone (Facebook Group)](https://www.facebook.com/groups/salesforceforeveryone/){:.underline-effect}{:target="blank"}
 - [Jordan Nelson (YouTube)](https://www.youtube.com/channel/UCINpGiyvDZiGpXVWmBrj7Cg){:.underline-effect}{:target="blank"}
